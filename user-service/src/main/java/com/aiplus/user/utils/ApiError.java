@@ -1,0 +1,23 @@
+package com.aiplus.user.utils;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+/**
+ * Represents an API error response.
+ */
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class ApiError {
+    private final LocalDateTime timestamp = LocalDateTime.now();
+    private int status;
+    private String error;
+    private String message;
+    private List<String> details;
+
+}
